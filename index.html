@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- fas buttons were not working had to downgrade bootstrap -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <!-- Navigation bar  -->
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand w-100 text-center"><h1>Weather Dashboard</h1></span>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-4 bg-light">
+          <h5 class="m-1">Search for a city: </h5>
+          <div class="row">
+            <div class="col-10">
+              <div class="input-group">
+                <input class="form-control" type="text" id="cityInput">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- todays forecast details -->
+        <div class="col-8">
+          <div class="row">
+            <div class="col-12 border border-dark m-3 rounded">
+              <div class="row">
+                <div class="col-12">
+                  <p id="cityName" class="city-name"></p>
+                  <img id="currentIcon">
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-12">
+                <p id="temp"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p id="humidity"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p id="windSpeed"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p id="uvIndex"></p>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <h4>5-Day Forecast:</h4>
+                <div id="forecast"></div>
+              </div>
+            </div>
+          </div>
+          <!-- forecast modules -->
+          <div class="row">
+            <div class="col forecast bg-primary text-white rounded"></div>
+            <div class="col forecast bg-primary text-white rounded"></div>
+            <div class="col forecast bg-primary text-white rounded"></div>
+            <div class="col forecast bg-primary text-white rounded"></div>
+            <div class="col forecast bg-primary text-white rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
